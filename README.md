@@ -32,8 +32,8 @@ While you use your workstations, maintain all of your general, day-to-day storag
 
 Some workstation configurations are pulled from your system folders and pushed here automatically, then pulled back into your workstations as .sync files (safety feature) when performing a download sync job:
 
-* Hosts configuration: ~/Storage/Software/Configuration Files/workstation_hosts.txt
-* SSH configuration: ~/Storage/Software/Configuration Files/workstation_ssh_config.txt
+* Hosts configuration: **~/Storage/Software/Configuration Files/workstation_hosts.txt**
+* SSH configuration: **~/Storage/Software/Configuration Files/workstation_ssh_config.txt**
 
 ### Encrypted Containers
 
