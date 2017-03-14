@@ -33,8 +33,7 @@ echo
 ## script prompt
 options=("Linux - Download from Cloud"
          "Linux - Upload to Cloud"
-         "Linux - Upload to NAS"
-         "Linux - Upload Everywhere")
+         )
 prompt="Pick an option:"
 PS3="$prompt "
 select opt in "${options[@]}" "Quit"; do 
