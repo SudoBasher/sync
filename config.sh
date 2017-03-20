@@ -18,7 +18,7 @@
 	LocalStorageHostsFile="Software/Configuration Files/workstation_hosts.txt"
 	LocalSystemHostsFile="/etc/hosts"
 	LocalStorageSSHConfigFile="Software/Configuration Files/workstation_ssh_config.txt"
-	LocalSystemSSHConfigFile="/home/user/.ssh/config"
+	LocalSystemSSHConfigFile=".ssh/config"
 
 	RemoteServer="sync2"
 	RemoteStorageDirectory="/media/ssd60/"
