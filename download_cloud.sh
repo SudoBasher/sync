@@ -39,8 +39,8 @@ echo
     --progress \
     --exclude-from='"'$WorkstationHomeDirectory$LocalExcludeFileDirectory$ExcludeFileName'"'\
     -e '"ssh"' $RemoteServer:"$RemoteStorageDirectory" \
-    $WorkstationHomeDirectory$LocalStorageDownloadDirectory
-  #ExecuteRunfile
+    $WorkstationHomeDirectory$LocalStorageDownloadDirectory > ./runfile.sh
+  ExecuteRunfile
   echo
 
   ## encrypted volumes
@@ -52,8 +52,8 @@ echo
     --log-file $WorkstationHomeDirectory$LocalDocumentsDirectory$LocalLogPrefix$ScriptFilename$LocalLogPostfix \
     --progress \
     -e '"ssh"' $RemoteServer:"$RemoteStorageDirectory$SecureDirectory" \
-    $WorkstationHomeDirectory$LocalStorageDownloadDirectory$SecureDirectory
-  #ExecuteRunfile
+    $WorkstationHomeDirectory$LocalStorageDownloadDirectory$SecureDirectory > ./runfile.sh
+  ExecuteRunfile
   echo
 
 ## copy workstation storage to workstation configs
@@ -68,8 +68,8 @@ echo
     --log-file $WorkstationHomeDirectory$LocalDocumentsDirectory$LocalLogPrefix$ScriptFilename$LocalLogPostfix \
     --progress \
     '"'$WorkstationHomeDirectory$LocalStorageDownloadDirectory$LocalStorageHostsFile'"' \
-    '"'$LocalSystemHostsFile'.sync"'
-  #ExecuteRunfile
+    '"'$LocalSystemHostsFile'.sync"' > ./runfile.sh
+  ExecuteRunfile
   echo
 
   ## ssh config file 
@@ -79,8 +79,8 @@ echo
     --log-file $WorkstationHomeDirectory$LocalDocumentsDirectory$LocalLogPrefix$ScriptFilename$LocalLogPostfix \
     --progress \
     '"'$WorkstationHomeDirectory$LocalStorageDownloadDirectory$LocalStorageSSHConfigFile'"' \
-    '"'$WorkstationHomeDirectory$LocalSystemSSHConfigFile'.sync"'
-  #ExecuteRunfile
+    '"'$WorkstationHomeDirectory$LocalSystemSSHConfigFile'.sync"' > ./runfile.sh
+  ExecuteRunfile
   echo
 
 EndingTimestamp=$(date +%Y-%m-%d@%H:%M:%S:%N)
