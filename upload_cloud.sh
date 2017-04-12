@@ -49,7 +49,7 @@ echo
     $ExtraRsyncOptions \
     --log-file $WorkstationHomeDirectory$LocalDocumentsDirectory$LocalLogPrefix$ScriptFilename$LocalLogPostfix \
     --progress \
-    '"'$LocalSystemSSHConfigFile'"' \
+    '"'$WorkstationHomeDirectory$LocalSystemSSHConfigFile'"' \
     '"'$WorkstationHomeDirectory$LocalStorageUploadDirectory$LocalStorageSSHConfigFile'"' > ./runfile.sh
   ExecuteRunfile
   echo
