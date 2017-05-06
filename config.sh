@@ -11,6 +11,7 @@
 	## global settings
 	LocalExcludeFileDirectory="Development/Github/sudobasher/sync/"
 	LocalDocumentsDirectory="Documents/"
+	LocalDevelopmentUploadDirectory="Development/"
 	LocalStorageUploadDirectory="Storage/"
 	LocalStorageDownloadDirectory="Storage-Download/"
 	SecureDirectory="Secure/"
@@ -22,6 +23,11 @@
 
 	RemoteServer="sync2"
 	RemoteStorageDirectory="/media/ssd60/"
+	RedundantServer="sync3"
+	RedundantStorageDirectory="/media/ssd60/"
+	NASServer="airlock"
+	NASStorageDirectory="/volume1/Backup\ Data/Storage/"
+	NASDevelopmentDirectory="/volume1/Backup\ Data/Development/"
 
 ## keep these system settings as is
 ## messing with some of these could give you a serious headache
