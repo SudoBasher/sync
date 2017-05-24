@@ -1,0 +1,10 @@
+
+Add primary cloud server to redundant cloud server backups.
+
+Add NAS backups.
+
+Instead of downloading to a different Storage-Download folder, prior to downloading, move current Storage upload folder to Storage-Old name, then download to Storage.
+
+Separate syncing of system configs and storage into different, manually-activated processes? Flush this idea out a bit more. It sometimes I don't want to have the download process push the cloud hosts and .ssh configuration into my local machine.
+
+Be able to use delete-delay for certain backups portions, but not others.
