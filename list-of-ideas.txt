@@ -1,7 +1,21 @@
 
+To Do:
+
+Add breadcrumb/logging to server & local workstations.
+
+Ensure documentation of .ssh/config requirements.
+
+Abort alternate port usage. Just use .ssh/config instead.
+
+Add cloud server setup (make directories, assign directory privs, etc)
+
 Add primary cloud server to redundant cloud server backups.
 
-Add NAS backups.
+Add cron support.
+
+
+
+Possibilities:
 
 Instead of downloading to a different Storage-Download folder, prior to downloading, move current Storage upload folder to Storage-Old name, then download to Storage.
 

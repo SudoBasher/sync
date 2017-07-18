@@ -20,13 +20,13 @@ echo
 ## delete prompt
 read -p "Enabled deleting of target folder/files? <y/N> " prompt
 if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]];
-then
-  ## sync settings
-  EnableDeleteDelayOption="true"
-  ExtraRsyncOptions="--delete-delay"
-  echo "Deleting enabled!"
-else
-  echo "Deleting disabled."
+  then
+    ## sync settings
+    EnableDeleteDelayOption="true"
+    ExtraRsyncOptions="--delete-delay"
+    echo "Deleting enabled!"
+  else
+    echo "Deleting disabled."
 fi
 echo
 
@@ -46,29 +46,35 @@ select opt in "${options[@]}" "Quit"; do
       1 )
         WorkstationType="Linux"
         TransactionType="download"
+        TargetType="Cloud"
         . ./download_cloud.sh;;
       2 )
         WorkstationType="Linux" 
         TransactionType="upload"
+        TargetType="Cloud"
         . ./upload_cloud.sh
         ;;
       3 )
         WorkstationType="Linux"
-        TransactionType="upload" 
+        TransactionType="upload"
+        TargetType="NAS"
         . ./upload_nas.sh
         ;;
       4 )
         WorkstationType="Mac"
-        TransactionType="download" 
+        TransactionType="download"
+        TargetType="Cloud"
         . ./download_cloud.sh
         ;;
       5 )
         WorkstationType="Mac"
         TransactionType="upload"
+        TargetType="Cloud"
         . ./upload_cloud.sh;;
       6 )
         WorkstationType="Mac"
         TransactionType="upload"
+        TargetType="NAS"
         . ./upload_nas.sh;;
       $(( ${#options[@]}+1 )) ) echo "Quitting..."; break;;
       *) echo "Invalid option. Try another one.";continue;;

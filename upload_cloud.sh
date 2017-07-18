@@ -1,25 +1,12 @@
 #!/bin/bash
 
 ## script settings
-case $WorkstationType in
-  Linux )
-    WorkstationHomeDirectory=$LinuxWorkstationHomeDirectory
-    RsyncOptions=$LinuxRsyncOptions
-    ;;
-  Mac )
-    WorkstationHomeDirectory=$MacWorkstationHomeDirectory
-    RsyncOptions=$MacRsyncOptions
-    ;;
-  * )
-    echo
-    echo "/ Error! Invalid workstation type."
-    echo
-    exit
-    ;;
-esac
 ScriptTitle=$WorkstationType" - Upload to Cloud"
 ScriptFilename="upload_cloud"
 StartingTimestamp=$(date +%Y-%m-%d@%H:%M:%S:%N)
+
+## configure environment
+. ./environment.sh
 
 ## title
 echo
