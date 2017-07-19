@@ -72,6 +72,22 @@ echo
 
 EndingTimestamp=$(date +%Y-%m-%d@%H:%M:%S:%N)
 
+## write log
+
+  TransactionLogFile=$WorkstationHomeDirectory$LocalDocumentsDirectory$TransactionLogFile
+  echo "LogFile: "$TransactionLogFile
+  echo "## Transaction Log:" > $TransactionLogFile
+  echo >> $TransactionLogFile
+  echo "Hostname: "$HOSTNAME >> $TransactionLogFile
+  echo "Workstation Type: "$WorkstationType >> $TransactionLogFile
+  echo "Transaction Type: "$TransactionType >> $TransactionLogFile
+  echo "Target Type: "$TargetType >> $TransactionLogFile
+  echo "Remote Server: "$RemoteServer >> $TransactionLogFile
+  echo >> $TransactionLogFile
+  echo "Started at: "$StartingTimestamp >> $TransactionLogFile
+  echo "Ended at:   "$EndingTimestamp >> $TransactionLogFile
+  echo "Log file written."
+
 ## ending message
 echo
 echo "// Ending job timestamp: $EndingTimestamp"
