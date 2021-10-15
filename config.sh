@@ -20,11 +20,13 @@
 	LocalSystemHostsFile="/etc/hosts"
 	LocalStorageSSHConfigFile="software/configuration files/workstation_ssh_config.txt"
 	LocalSystemSSHConfigFile=".ssh/config"
+	LocalSystemDBeaverDataDirectory=".local/share/DBeaverData/workspace6/General/.dbeaver/"
+	LocalEncryptedVolumeDBeaverDataDirectory="/media/veracrypt1/pers creds/computing/database guis/DBeaverData/workspace6/General/.dbeaver"
 
-	RemoteServer="storage1"
+	RemoteServer="storage0"
 	RemoteStorageDirectory="/home/sudobasher/storage/"
-	RedundantServer="sync3"
-	RedundantStorageDirectory="/media/ssd60/"
+	# RedundantServer="sync3" ## not used yet
+	# RedundantStorageDirectory="/media/ssd60/" ## not used yet
 	NASServer="airlock"
 	NASStorageDirectory="/volume1/Backup\ Data/storage/"
 	NASDevelopmentDirectory="/volume1/Backup\ Data/development/"
@@ -34,7 +36,7 @@
 
 	## app settings
 	title="**Sync**"
-	LinuxRsyncOptions="-avzs"
+	LinuxRsyncOptions="-avWs"
 	MacRsyncOptions="-avs"
 	LocalLogPrefix="rsynclog_sync_"
 	LocalLogPostfix=".txt"
