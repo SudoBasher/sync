@@ -1,2 +1,3 @@
-.git/
-Secure/*
+# .git/
+secure/*
+

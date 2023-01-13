@@ -27,7 +27,7 @@ echo "/ Starting Job: $ScriptTitle"
 echo "// Starting job timestamp: $StartingTimestamp"
 echo
 
-## copy workstation storage to workstation configs
+## copy workstation config to workstation storage
 
   echo "// Syncing workstation config files..."
   echo
@@ -51,6 +51,19 @@ echo
     --progress \
     '"'$WorkstationHomeDirectory$LocalSystemSSHConfigFile'"' \
     '"'$WorkstationHomeDirectory$LocalStorageUploadDirectory$LocalStorageSSHConfigFile'"' > ./runfile.sh
+  ExecuteRunfile
+  echo
+  
+## copy dbbeaver credentials config to encrypted volume
+
+  ## ssh config file 
+  echo rsync \
+    $RsyncOptions \
+    $ExtraRsyncOptions \
+    --log-file $WorkstationHomeDirectory$LocalDocumentsDirectory$LocalLogPrefix$ScriptFilename$LocalLogPostfix \
+    --progress \
+    '"'$WorkstationHomeDirectory$LocalSystemDBeaverDataDirectory'"' \
+    '"'$LocalEncryptedVolumeDBeaverDataDirectory'"' > ./runfile.sh
   ExecuteRunfile
   echo
 
